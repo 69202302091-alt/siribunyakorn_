@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - สิริบุญญากร มาลี (อิมมี่)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Prompt & Mitr -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pink: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f472b6',
+                            400: '#e879f9',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            soft: '#FFF0F5',
+                            pastel: '#FFD1DC',
+                            accent: '#FF85A1',
+                            deep: '#C94A6E'
+                        }
+                    },
+                    fontFamily: {
+                        prompt: ['Prompt', 'sans-serif'],
+                        mitr: ['Mitr', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #FFF0F5;
+            color: #4A3E3D;
+        }
+        .font-heading {
+            font-family: 'Mitr', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 209, 220, 0.5);
+        }
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-pink-300 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-card shadow-sm px-6 py-4 transition-all">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="#" class="font-heading text-xl font-bold text-pink-600 flex items-center gap-2">
+                <i class="fa-solid fa-heart text-pink-400 text-lg"></i>
+                Immy's Portfolio
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#about" class="hover:text-pink-500 transition-colors">เกี่ยวกับฉัน</a>
+                <a href="#education" class="hover:text-pink-500 transition-colors">การศึกษา</a>
+                <a href="#skills" class="hover:text-pink-500 transition-colors">ความสามารถ & งานอดิเรก</a>
+                <a href="#contact" class="hover:text-pink-500 transition-colors">ติดต่อ</a>
+            </div>
+            <!-- Mobile Navigation Toggle -->
+            <button id="mobileMenuBtn" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden pt-4 pb-2 px-4 flex flex-col space-y-3 text-sm font-medium text-gray-600">
+            <a href="#about" class="block hover:text-pink-500">เกี่ยวกับฉัน</a>
+            <a href="#education" class="block hover:text-pink-500">การศึกษา</a>
+            <a href="#skills" class="block hover:text-pink-500">ความสามารถ & งานอดิเรก</a>
+            <a href="#contact" class="block hover:text-pink-500">ติดต่อ</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="pt-24 pb-16 px-4 md:px-8 max-w-5xl mx-auto w-full space-y-20">
+
+        <!-- Hero & Profile Section -->
+        <section id="about" class="scroll-mt-28 flex flex-col md:flex-row items-center gap-8 md:gap-12 py-8">
+            <div class="relative group">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full p-2 bg-gradient-to-tr from-pink-300 via-pink-200 to-pink-400 shadow-xl float-animation">
+                    <!-- Placeholder Profile Image -->
+                    <img id="profileImg" src="https://placehold.co/400x400/ffd1dc/c94a6e?text=Immy" alt="สิริบุญญากร มาลี" class="w-full h-full object-cover rounded-full shadow-inner border-4 border-white">
+                </div>
+                <div class="absolute -bottom-2 -right-2 bg-white p-3 rounded-full shadow-md text-pink-500 text-xl border border-pink-100">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+            </div>
+
+            <div class="flex-1 text-center md:text-left space-y-4">
+                <div class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-xs font-semibold tracking-wide uppercase">
+                    Public Health Student
+                </div>
+                <h1 class="font-heading text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
+                    สวัสดีค่ะ, หนูชื่อ <span class="text-pink-500">อิมมี่</span> 🌸
+                </h1>
+                <p class="text-lg text-gray-600 font-medium">
+                    นางสาวสิริบุญญากร มาลี
+                </p>
+                <div class="text-sm text-gray-600 leading-relaxed max-w-xl bg-white/50 p-4 rounded-2xl border border-pink-100/60 shadow-sm">
+                    <p class="mb-2"><i class="fa-solid fa-sparkles text-pink-400 mr-2"></i><strong>บุคลิกส่วนตัว:</strong> เป็นคนเงียบๆ นิ่งๆ ไม่ค่อยพูด ชอบความสงบและบรรยากาศละมุน</p>
+                    <p><i class="fa-solid fa-heart text-pink-400 mr-2"></i><strong>สีที่ชอบ:</strong> สีชมพู 💕 (พาสเทลน่ารักๆ)</p>
+                </div>
+                <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
+                    <a href="#contact" class="px-6 py-2.5 bg-pink-500 hover:bg-pink-600 text-white font-medium rounded-full shadow-lg shadow-pink-200 transition-all transform hover:-translate-y-0.5 text-sm flex items-center gap-2">
+                        <i class="fa-regular fa-envelope"></i> ติดต่อฉัน
+                    </a>
+                    <a href="#education" class="px-6 py-2.5 bg-white hover:bg-pink-50 text-pink-600 font-medium rounded-full border border-pink-200 shadow-sm transition-all text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap"></i> ประวัติการศึกษา
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Info Grid -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="glass-card p-4 rounded-2xl text-center space-y-1 hover:shadow-md transition-shadow">
+                <div class="text-pink-400 text-2xl"><i class="fa-solid fa-cake-candles"></i></div>
+                <div class="text-xs text-gray-500">วันเกิด / อายุ</div>
+                <div class="font-semibold text-gray-700 text-sm">8 พ.ย. 2550 (18 ปี)</div>
+            </div>
+            <div class="glass-card p-4 rounded-2xl text-center space-y-1 hover:shadow-md transition-shadow">
+                <div class="text-pink-400 text-2xl"><i class="fa-solid fa-flag"></i></div>
+                <div class="text-xs text-gray-500">สัญชาติ / เชื้อชาติ</div>
+                <div class="font-semibold text-gray-700 text-sm">ไทย / ไทย</div>
+            </div>
+            <div class="glass-card p-4 rounded-2xl text-center space-y-1 hover:shadow-md transition-shadow">
+                <div class="text-pink-400 text-2xl"><i class="fa-solid fa-book-open"></i></div>
+                <div class="text-xs text-gray-500">สาขาที่ศึกษา</div>
+                <div class="font-semibold text-gray-700 text-sm">สาธารณสุขชุมชน</div>
+            </div>
+            <div class="glass-card p-4 rounded-2xl text-center space-y-1 hover:shadow-md transition-shadow">
+                <div class="text-pink-400 text-2xl"><i class="fa-solid fa-paintbrush"></i></div>
+                <div class="text-xs text-gray-500">ความสามารถพิเศษ</div>
+                <div class="font-semibold text-gray-700 text-sm">วาดรูป</div>
+            </div>
+        </section>
+
+        <!-- Education Timeline Section -->
+        <section id="education" class="scroll-mt-28 space-y-6">
+            <div class="text-center md:text-left space-y-2">
+                <h2 class="font-heading text-2xl md:text-3xl font-bold text-gray-800 flex items-center justify-center md:justify-start gap-2">
+                    <i class="fa-solid fa-graduation-cap text-pink-500"></i> ประวัติการศึกษา
+                </h2>
+                <p class="text-sm text-gray-500">เส้นทางการเรียนรู้ของฉัน</p>
+            </div>
+
+            <div class="relative border-l-2 border-pink-200 ml-4 md:ml-6 space-y-8 py-2">
+                <!-- Current Study -->
+                <div class="relative pl-6 md:pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-pink-500 border-4 border-white shadow-sm"></div>
+                    <div class="glass-card p-6 rounded-2xl hover:border-pink-300 transition-all space-y-2">
+                        <span class="px-2.5 py-0.5 bg-pink-100 text-pink-600 rounded-md text-xs font-semibold">ปัจจุบันกำลังศึกษา</span>
+                        <h3 class="font-heading text-lg font-bold text-gray-800">วิทยาลัยสาธารณสุขสิรินธร จังหวัดขอนแก่น</h3>
+                        <p class="text-sm text-pink-600 font-medium">คณะสาธารณสุขศาสตร์ | สาขาวิชาสาธารณสุขชุมชน</p>
+                        <p class="text-xs text-gray-500 pt-1">มุ่งมั่นศึกษาด้านการดูแลสุขภาพของชุมชน เสริมสร้างอนามัย และการส่งเสริมสุขภาพให้แก่ประชาชน</p>
+                    </div>
+                </div>
+
+                <!-- High School -->
+                <div class="relative pl-6 md:pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-pink-300 border-4 border-white shadow-sm"></div>
+                    <div class="glass-card p-6 rounded-2xl hover:border-pink-300 transition-all space-y-2">
+                        <span class="px-2.5 py-0.5 bg-gray-100 text-gray-600 rounded-md text-xs font-semibold">ระดับมัธยมศึกษา</span>
+                        <h3 class="font-heading text-lg font-bold text-gray-800">โรงเรียนบ้านไผ่</h3>
+                        <p class="text-sm text-gray-600">สำเร็จการศึกษาระดับมัธยมศึกษาตอนปลาย</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Hobbies Section -->
+        <section id="skills" class="scroll-mt-28 space-y-6">
+            <div class="text-center md:text-left space-y-2">
+                <h2 class="font-heading text-2xl md:text-3xl font-bold text-gray-800 flex items-center justify-center md:justify-start gap-2">
+                    <i class="fa-solid fa-star text-pink-500"></i> ความสามารถ & งานอดิเรก
+                </h2>
+                <p class="text-sm text-gray-500">สิ่งที่ชอบและกิจกรรมยามว่าง</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Special Skill Card -->
+                <div class="glass-card p-6 rounded-2xl space-y-4 hover:shadow-md transition-shadow border-t-4 border-t-pink-400">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center text-pink-500 text-xl">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-lg font-bold text-gray-800">ความสามารถพิเศษ</h3>
+                            <p class="text-xs text-gray-500">Special Talent</p>
+                        </div>
+                    </div>
+                    <div class="bg-white/80 p-4 rounded-xl border border-pink-100 space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-700 text-sm">การวาดรูป (Drawing & Art)</span>
+                            <span class="text-xs font-semibold text-pink-500">ชอบมาก ✨</span>
+                        </div>
+                        <p class="text-xs text-gray-500 leading-relaxed">
+                            ชอบการถ่ายทอดจินตนาการและความรู้สึกผ่านลายเส้นและสีสัน เป็นกิจกรรมที่ช่วยสร้างสมาธิและความคิดสร้างสรรค์
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hobbies Card -->
+                <div class="glass-card p-6 rounded-2xl space-y-4 hover:shadow-md transition-shadow border-t-4 border-t-pink-400">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center text-pink-500 text-xl">
+                            <i class="fa-solid fa-icons"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-lg font-bold text-gray-800">งานอดิเรก</h3>
+                            <p class="text-xs text-gray-500">Hobbies & Relaxation</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 pt-1">
+                        <div class="bg-white/80 p-3.5 rounded-xl border border-pink-100 text-center space-y-1">
+                            <i class="fa-solid fa-music text-pink-400 text-xl"></i>
+                            <div class="font-semibold text-gray-700 text-sm">ฟังเพลง</div>
+                            <div class="text-[11px] text-gray-400">ผ่อนคลายกับเสียงเพลง</div>
+                        </div>
+                        <div class="bg-white/80 p-3.5 rounded-xl border border-pink-100 text-center space-y-1">
+                            <i class="fa-solid fa-film text-pink-400 text-xl"></i>
+                            <div class="font-semibold text-gray-700 text-sm">ดูหนัง</div>
+                            <div class="text-[11px] text-gray-400">เพลิดเพลินกับเรื่องราว</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="scroll-mt-28 space-y-6">
+            <div class="glass-card p-8 rounded-3xl text-center space-y-6 max-w-2xl mx-auto border-2 border-pink-200">
+                <div class="space-y-2">
+                    <div class="w-14 h-14 rounded-full bg-pink-100 text-pink-500 text-2xl flex items-center justify-center mx-auto">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <h2 class="font-heading text-2xl font-bold text-gray-800">ติดต่ออิมมี่</h2>
+                    <p class="text-sm text-gray-500">สามารถส่งอีเมลหรือข้อความติดต่อสอบถามได้ที่นี่ค่ะ</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-2xl border border-pink-100 flex items-center justify-between gap-4 max-w-md mx-auto shadow-sm">
+                    <div class="flex items-center gap-3 overflow-hidden">
+                        <i class="fa-solid fa-envelope text-pink-400 text-lg"></i>
+                        <span id="emailText" class="text-sm text-gray-700 font-medium truncate">69202302091@scphkk.ac.th</span>
+                    </div>
+                    <button onclick="copyEmail()" class="px-3 py-1.5 bg-pink-50 hover:bg-pink-100 text-pink-600 rounded-lg text-xs font-medium transition-colors flex items-center gap-1 shrink-0">
+                        <i class="fa-regular fa-copy"></i>
+                        <span id="copyBtnText">คัดลอก</span>
+                    </button>
+                </div>
+
+                <!-- Interactive Message Form -->
+                <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-3 pt-2 text-left max-w-md mx-auto">
+                    <div>
+                        <input type="text" placeholder="ชื่อของคุณ" required class="w-full px-4 py-2.5 rounded-xl border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-300 text-sm bg-white/70">
+                    </div>
+                    <div>
+                        <textarea placeholder="ฝากข้อความไว้ตรงนี้..." rows="3" required class="w-full px-4 py-2.5 rounded-xl border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-300 text-sm bg-white/70 resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-2.5 bg-pink-500 hover:bg-pink-600 text-white font-medium rounded-xl text-sm transition-all shadow-md shadow-pink-200 flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> ส่งข้อความ
+                    </button>
+                </form>
+                <div id="formSuccessMessage" class="hidden text-xs text-pink-600 font-medium bg-pink-50 p-3 rounded-xl border border-pink-200">
+                    ✨ ขอบคุณสำหรับข้อความนะคะ! ส่งข้อความเรียบร้อยแล้วค่ะ
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card mt-12 py-6 border-t border-pink-200 text-center text-xs text-gray-500">
+        <div class="max-w-5xl mx-auto px-4 space-y-2">
+            <p>© 2026 สิริบุญญากร มาลี (อิมมี่) - วิทยาลัยสาธารณสุขสิรินธรจังหวัดขอนแก่น</p>
+            <p class="text-pink-400">Created with Minimal Modern Pink Style 💕</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Copy Email Function
+        function copyEmail() {
+            const emailText = document.getElementById('emailText').innerText;
+            const tempInput = document.createElement('input');
+            tempInput.value = emailText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            const copyBtnText = document.getElementById('copyBtnText');
+            copyBtnText.innerText = 'คัดลอกแล้ว!';
+            setTimeout(() => {
+                copyBtnText.innerText = 'คัดลอก';
+            }, 2000);
+        }
+
+        // Handle Contact Form Submit
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('contactForm');
+            const message = document.getElementById('formSuccessMessage');
+            
+            form.reset();
+            message.classList.remove('hidden');
+            setTimeout(() => {
+                message.classList.add('hidden');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
